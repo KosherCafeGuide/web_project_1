@@ -1,0 +1,83 @@
+.page {
+    min-width: 1100px;
+    /* we don't know how to make mobile versions of websites yet, */
+    /* so here we've set a minimum page width */
+    max-width: 1600px;
+    /* here we've set a maximum page width */
+    margin: 0 auto;
+    /* this ensures that all content is centered on screens wider than 1600px */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.small-left-margin {
+    margin-left: 64px;
+    /* for elements in the header and footer that have a small left margin */
+}
+
+.header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    /* parameters for the header section */
+}
+
+.logo_placeheader {
+    display: flexbox;
+    position: absolute;
+    z-index: 1;
+    /*stay in front*/
+    top: 30px;
+}
+
+.header__title {
+    display: flexbox;
+    /*margin-left: 64px; transfered to .small-left-margin */
+    line-height: 96px;
+    font-size: 102px;
+    font-weight: bold;
+    width: 730px;
+    vertical-align: middle;
+    z-index: 1;
+    /*stay in front*/
+}
+
+.header__subtitle {
+    display: flexbox;
+    width: 388px;
+    bottom: 30px;
+    z-index: 1;
+    /*stay in front*/
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.header__main-illustration {
+    display: flexbox;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.header__square-pic {
+    display: flexbox;
+    position: absolute;
+    right: 0;
+    top: 64px;
+    height: 568px;
+    width: 568px;
+    background-color: #2F80ED;
+    z-index: -1;
+    /* this box needs to go behind the image */
+}
+
+
+/* including elements with key-value modifiers */
+
+.table__cell_theme_dark {
+    width: 200px;
+    color: white;
+    margin-right: 0;
+    margin-top: 80px;
+}
