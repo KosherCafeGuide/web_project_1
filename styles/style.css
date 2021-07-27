@@ -79,17 +79,21 @@
 
 /*End of Header classes */
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 100px 0;
+    align-items: space-between;
+}
+
 
 /*Start of Description (two-column) classes */
 
-.content {
-    display: flex;
-    margin: 100px 0;
-}
-
 .description {
-    display: flex;
+    display: flexbox;
     margin: 100px 0;
+    min-width: 1100px;
 }
 
 .two-columns {
@@ -124,6 +128,70 @@
 
 .two-columns__span-accent {
     font-weight: bold;
+}
+
+
+/*End of Description (two-column) classes */
+
+
+/*Start of Digits classes */
+
+.digits {
+    display: flexbox;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.section-subtitle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1100px;
+    justify-content: space-between;
+    margin: 60px auto 100px;
+}
+
+.table__cell {
+    display: inline-flexbox;
+    width: 250px
+}
+
+.table__heading {
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table__text {
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 
