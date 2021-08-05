@@ -11,6 +11,7 @@
 
 .header {
     display: flex;
+    position: relative;
     height: 100vh;
     min-height: 600px;
     max-height: 756px;
@@ -18,7 +19,7 @@
 }
 
 .logo_placeheader {
-    display: flexbox;
+    display: flex;
     position: absolute;
     z-index: 1;
     /*stay in front*/
@@ -29,7 +30,7 @@
 }
 
 .header__title {
-    display: flexbox;
+    display: flex;
     position: absolute;
     left: 64px;
     line-height: 96px;
@@ -42,20 +43,28 @@
 }
 
 .header__subtitle {
-    display: flexbox;
+    display: flex;
     position: absolute;
     width: 388px;
-    bottom: 30px;
+    bottom: 55px;
     left: 64px;
     z-index: 1;
     /*stay in front*/
     line-height: 25px;
     font-size: 18px;
     font-weight: normal;
+    margin: 0;
+}
+
+.header__link {
+    display: flex;
+    position: absolute;
+    bottom: -25px;
+    margin: 0;
 }
 
 .header__main-illustration {
-    display: flexbox;
+    display: flex;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -65,7 +74,7 @@
 }
 
 .header__square-pic {
-    display: flexbox;
+    display: flex;
     position: absolute;
     right: 0;
     top: 64px;
@@ -83,7 +92,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    margin: 100px 0;
     align-items: space-between;
 }
 
@@ -91,40 +99,43 @@
 /*Start of Description (two-column) classes */
 
 .description {
-    display: flexbox;
+    display: flex;
     margin: 100px 0;
     min-width: 1100px;
+    justify-items: center;
 }
 
 .two-columns {
+    display: flex;
     min-height: 476px;
     /*allow 14 lines of 34px height */
     max-width: 1600px;
-    display: flex;
-    justify-self: center;
+    margin: 0 auto;
     justify-items: space-between;
 }
 
 .two-columns__brief {
-    display: inline-flexbox;
+    display: flex;
     width: 175px;
     line-height: 1.2;
     font-size: 18px;
     font-weight: normal;
+    margin: 0;
     color: #2F80ED;
 }
 
 .two-columns__main-text {
-    display: inline-flexbox;
-    width: 80%;
-    min-width: 784px;
+    display: flex;
+    flex-direction: column;
     line-height: 34px;
     font-size: 24px;
+    width: 80%;
 }
 
 .two-columns__paragraph {
-    display: flexbox;
+    min-width: 784px;
     font-weight: normal;
+    margin: 0 0 30px auto;
 }
 
 .two-columns__span-accent {
@@ -139,13 +150,12 @@
 
 .digits {
     display: flex;
-    position: relative;
+    /*position: relative;*/
     left: 0;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     margin: 0;
-    width: 95vw;
 }
 
 .section-title {
@@ -207,11 +217,12 @@
 .feynman {
     display: flex;
     position: relative;
-    width: 95vw;
+    left: 0;
     justify-content: center;
     align-content: center;
     margin: 100 auto;
     height: 790px;
+    width: 95vw;
 }
 
 .feynman__background-image {
@@ -271,7 +282,6 @@
     display: flex;
     position: relative;
     left: 0;
-    max-width: 1600px;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -281,17 +291,21 @@
 }
 
 .section-title_theme_dark {
+    display: flex;
     color: white;
-    width 90%;
+    margin: 90px auto 20px;
 }
 
 .section-subtitle_theme_dark {
+    display: flex;
     color: white;
 }
 
 .table_theme_dark {
+    display: flex;
     z-index: 1;
-    width 1100px
+    width: 1100px;
+    margin: 0 auto 90px;
 }
 
 .table__cell_theme_dark {
@@ -299,23 +313,28 @@
     color: white;
     margin-right: 0;
     margin-top: 80px;
+    list-style-type: none;
 }
 
 .table__heading_theme_dark {
     color: white;
+    margin: 0;
 }
 
 .table__text_theme_dark {
+    margin-top: 20px;
+    margin-bottom: 0;
     color: white;
 }
 
 .kaufman__triangle {
+    display: flex;
     position: absolute;
     top: 0;
     right: -124px;
     z-index: 0;
-    height: 636px;
-    width: 660px;
+    height: 660px;
+    width: 636px;
 }
 
 
@@ -325,40 +344,39 @@
 /*Start of Footer classes */
 
 .footer {
-    display: flex;
-    flex-basis: 711px;
-    min-height: 350px;
     background-color: black;
 }
 
 .footer__columns {
     display: flex;
-    position: absolute;
-    top: 0;
-    margin: auto;
-    flex-direction: row;
-    align-items: space-between;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
     width: 90%;
-    border: 60px auto 40px;
+    margin: auto;
 }
 
 .footer__column_content_copyright {
     display: flex;
-    position: absolute;
-    left: 0;
-    width: 50%;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+    justify-content: space-between;
+    min-height: 350px;
+    /*No dimensions given. so this is my best guess at the width*/
 }
 
 .footer__column_content_about {
-    /*display: flex;*/
-    position: absolute;
-    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 18%;
+    /*No dimensions given. so this is my best guess at the width*/
 }
 
 .footer__column_content_social {
     display: flex;
-    position: absolute;
-    margin-right: 0;
+    flex-flow: column wrap;
+    flex-basis: 10%;
+    /*No dimensions given. so this is my best guess at the width*/
 }
 
 .logo_place_footer {
@@ -371,8 +389,7 @@
     font-size: 18px;
     font-weight: normal;
     color: white;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin: 18px 0 18px;
 }
 
 .footer__column-heading {
@@ -380,14 +397,17 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
+    margin: 0;
 }
 
 .footer__list {
+    display: flex;
+    flex-flow: column wrap;
     line-height: 30px;
     font-size: 18px;
     font-weight: normal;
+    margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 .footer__column-link {
@@ -395,5 +415,8 @@
 }
 
 .footer__social-icons {
+    display: flex;
+    flex-flow: column wrap;
     color: white;
+    margin-right: 10px;
 }
