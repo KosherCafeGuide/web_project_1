@@ -202,7 +202,7 @@
 
 .table__cell {
     display: inline-flexbox;
-    width: 250px
+    width: 250px;
 }
 
 .table__heading {
@@ -245,7 +245,7 @@
     bottom: 0;
     left: 0;
     height: 637px;
-    width: 867px
+    width: 867px;
 }
 
 .feynman__title {
