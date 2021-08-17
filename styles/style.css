@@ -16,6 +16,7 @@
     min-height: 600px;
     max-height: 756px;
     /* parameters for the header section */
+    background-color: #f2f2f2
 }
 
 .logo_placeheader {
@@ -27,28 +28,34 @@
     left: 64px;
     width: 154px;
     height: 31px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .header__title {
     display: flex;
     position: absolute;
+    /*Brief states: Give the element absolute positioning. */
     left: 64px;
     line-height: 96px;
     font-size: 102px;
     font-weight: bold;
     width: 730px;
     align-self: center;
-    z-index: 1;
+    z-index: 2;
     /*stay in front*/
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .header__subtitle {
     display: flex;
+    flex-direction: column;
     position: absolute;
     width: 388px;
-    bottom: 55px;
+    bottom: 30px;
     left: 64px;
-    z-index: 1;
+    z-index: 2;
     /*stay in front*/
     line-height: 25px;
     font-size: 18px;
@@ -58,9 +65,9 @@
 
 .header__link {
     display: flex;
-    position: absolute;
-    bottom: -25px;
     margin: 0;
+    color: #2f80ed;
+    text-decoration: none;
 }
 
 .header__main-illustration {
@@ -81,7 +88,7 @@
     height: 568px;
     width: 568px;
     background-color: #2F80ED;
-    z-index: -1;
+    z-index: 0;
     /* this box needs to go behind the image */
 }
 
@@ -91,7 +98,6 @@
 .content {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
     align-items: space-between;
 }
 
@@ -111,11 +117,10 @@
 
 .two-columns {
     display: flex;
-    min-height: 476px;
-    /*allow 14 lines of 34px height */
+    width: 80%;
     max-width: 1600px;
     margin: 0 auto;
-    justify-items: space-between;
+    justify-content: space-between;
 }
 
 .two-columns__brief {
@@ -142,6 +147,10 @@
     margin: 0 0 30px auto;
 }
 
+.two-columns__paragraph:last-child {
+    margin: 0;
+}
+
 .two-columns__span-accent {
     font-weight: bold;
 }
@@ -159,7 +168,7 @@
     max-width: 1600px;
     /* here we've set a maximum page width */
     display: flex;
-    /*position: relative;*/
+    position: relative;
     left: 0;
     justify-content: center;
     align-content: center;
@@ -196,25 +205,31 @@
     flex-wrap: wrap;
     width: 1100px;
     justify-content: space-between;
-    margin: 60px auto 100px;
+    margin: 0 auto 100px;
     padding: 0;
+    list-style: none;
 }
 
 .table__cell {
     display: inline-flexbox;
     width: 250px;
+    margin-top: 60px;
 }
 
 .table__heading {
     line-height: 1.15;
     font-size: 24px;
     font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .table__text {
     line-height: 1.2;
     font-size: 18px;
     font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
@@ -231,17 +246,20 @@
     /* here we've set a maximum page width */
     display: flex;
     position: relative;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding-top: 100px;
     left: 0;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
-    margin: 100 auto;
+    margin: 0 auto;
     height: 790px;
-    width: 95vw;
+    /* block height specified in Brief!*/
 }
 
 .feynman__background-image {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     bottom: 0;
     left: 0;
     height: 637px;
@@ -249,29 +267,24 @@
 }
 
 .feynman__title {
-    position: absolute;
-    justify-content: center;
-    text-align: center;
-    top: 0;
+    position: relative;
     width: 775px;
     line-height: 1.15;
     font-size: 120px;
     font-weight: bold;
-    margin: auto;
-    /*wrap: active;*/
+    text-align: center;
+    margin: 100px auto 70px;
+    z-index: 1;
 }
 
 .feynman__subtitle {
-    position: absolute;
-    top: 346px;
-    /*(2 lines of title  = 120 font height * 2 lines * 1.15 lineheight)+70 margin*/
-    justify-content: center;
+    position: relative;
     text-align: center;
     line-height: 51px;
     font-size: 36px;
     font-weight: normal;
-    margin: auto;
-    margin-top: 70px;
+    margin: 0;
+    z-index: 1;
 }
 
 .feynman__link {
@@ -284,6 +297,8 @@
     font-size: 36px;
     font-weight: normal;
     color: #2F80ED;
+    text-decoration: none;
+    z-index: 1;
 }
 
 
@@ -306,18 +321,20 @@
     flex-wrap: wrap;
     margin: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #1f1f1f;
 }
 
 .section-title_theme_dark {
     display: flex;
     color: white;
-    margin: 90px auto 20px;
+    margin: 90px auto 0;
+    z-index: 1;
 }
 
 .section-subtitle_theme_dark {
     display: flex;
     color: white;
+    z-index: 1;
 }
 
 .table_theme_dark {
@@ -363,10 +380,13 @@
 /*Start of Footer classes */
 
 .footer {
-    background-color: black;
+    background-color: #1f1f1f;
+    min-height: 350px;
+    /* required by brief*/
+    /*No vertical paddings specified in brief*/
 }
 
-.footer__columns {
+.footer__column {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -378,24 +398,19 @@
 .footer__column_content_copyright {
     display: flex;
     flex-flow: column wrap;
-    flex-basis: 50%;
+    flex-basis: 711px;
     justify-content: space-between;
-    min-height: 350px;
-    /*No dimensions given. so this is my best guess at the width*/
+    min-height: 250px;
 }
 
 .footer__column_content_about {
     display: flex;
     flex-flow: column wrap;
-    flex-basis: 18%;
-    /*No dimensions given. so this is my best guess at the width*/
 }
 
 .footer__column_content_social {
     display: flex;
     flex-flow: column wrap;
-    flex-basis: 10%;
-    /*No dimensions given. so this is my best guess at the width*/
 }
 
 .logo_place_footer {
@@ -416,7 +431,7 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
-    margin: 0;
+    margin: 0 0 20px;
 }
 
 .footer__list {
@@ -431,6 +446,7 @@
 
 .footer__column-link {
     color: white;
+    text-decoration: none;
 }
 
 .footer__social-icons {

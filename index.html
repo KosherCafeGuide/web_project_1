@@ -64,6 +64,7 @@
                         <p class="table__text">
                             The percentage of adults in the US who consider themselves lifelong learners
                             <br><br>Pew Research Centre
+                            <!--putting "Pew Research center" in a new <p> tag made it disappear from the table. <br> is the only way I have found to add a new line within a single piece of text-->
                         </p>
                     </li>
                     <li class="table__cell">
@@ -89,6 +90,7 @@
                         <p class="table__text">
                             The number of adults under 25 with insufficient education for finding employment
                             <br><br> World Bank 2017
+                            <!--putting "World Bank 2017" in a new <p> tag made it disappear from the table. <br> is the only way I have found to add a new line within a single piece of text-->
                         </p>
                     </li>
                     <li class="table__cell">
@@ -213,8 +215,9 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="footer__columns">
+            <nav class="footer__column">
                 <div class="footer__column_content_copyright">
+                    <!--brief: "block: footer, element: column, modifier key: content, modifier value: copyright-->
                     <img class="logo logo_place_footer" src="./images/logo_place_footer.png" alt="Practicum logo">
                     <p class="footer__author">&copy; 2021 David Avraham</p>
 
@@ -222,6 +225,7 @@
                 <div class="footer__column_content_about">
                     <h4 class="footer__column-heading">About Practicum by Yandex</h4>
                     <div class="footer__list">
+                        <!--using ul and li confuses the flex boxes. I couldn't get this section to look right until I changed them for div and a -->
                         <a class="footer__column-link" href="#">Home Page</a>
                         <a class="footer__column-link" href="#">Mission</a>
                         <a class="footer__column-link" href="#">Professions</a>
@@ -231,17 +235,17 @@
 
                 <div class="footer__column_content_social">
                     <h4 class="footer__column-heading">Social Media</h4>
-                    <div class="footer__social-icons">
-                        <a class="footer__column-link" href="#">
+                    <div class="footer__list">
+                        <a class="footer__column-link footer__social-icons" href="#">
                             <img src="./images/facebook_white.svg" alt="Facebook">Facebook
                         </a>
-                        <a class="footer__column-link" href="#">
+                        <a class="footer__column-link footer__social-icons" href="#">
                             <img src="./images/instagram_white.svg" alt="Instagram">Instagram
                         </a>
 
                     </div>
                 </div>
-            </div>
+            </nav>
         </footer>
     </div>
 </body>
