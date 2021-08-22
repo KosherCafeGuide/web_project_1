@@ -383,13 +383,17 @@
     box-sizing: border-box;
 }
 
-.footer__column {
+.footer__columns {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: stretch;
     width: 90%;
     margin: auto;
+}
+
+.footer__column {
+    list-style-type: none;
 }
 
 .footer__column_content_copyright {
@@ -440,16 +444,18 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style-type: none;
 }
 
 .footer__column-link {
     color: white;
     text-decoration: none;
+    list-style-type: none;
 }
 
 .footer__social-icons {
     color: white;
     margin-right: 10px;
-    width: 10px;
+    width: 16px;
     height: 16px;
 }
