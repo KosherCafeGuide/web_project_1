@@ -1,0 +1,11 @@
+.header__square-pic {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 64px;
+    height: 568px;
+    width: 568px;
+    background-color: #2F80ED;
+    z-index: 0;
+    /* this box needs to go behind the image */
+}

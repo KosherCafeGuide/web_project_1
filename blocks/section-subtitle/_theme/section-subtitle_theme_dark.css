@@ -1,0 +1,5 @@
+.section-subtitle_theme_dark {
+    display: flex;
+    color: white;
+    z-index: 1;
+}

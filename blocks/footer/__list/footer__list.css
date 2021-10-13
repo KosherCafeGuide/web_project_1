@@ -1,0 +1,11 @@
+.footer__list {
+    display: flex;
+    flex-flow: column wrap;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
