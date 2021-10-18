@@ -3,5 +3,5 @@
     height: 620px;
     margin-top: 68px;
     margin-right: 48px;
-    display: flex;
+    display: inline-block;
 }

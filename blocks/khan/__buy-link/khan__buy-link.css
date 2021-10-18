@@ -2,5 +2,8 @@
     line-height: 42px;
     font-size: 30px;
     font-weight: normal;
-    display: flex;
+    display: inline-block;
+    margin-top: 60px;
+    vertical-align: top;
+    text-decoration: none;
 }
