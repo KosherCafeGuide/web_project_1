@@ -1,6 +1,6 @@
 .video {
-    /*100+69+20+34+50+(0.8*316)=525.8 round up to 526px */
-    max-height: 526px;
+    /*100+69+20+34+50+(0.7*316)=494.2 round down to 494px */
+    max-height: 494px;
     margin-top: 100px;
     overflow: visible;
 }

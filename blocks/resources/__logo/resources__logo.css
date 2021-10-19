@@ -3,3 +3,7 @@
     height: 38px;
     align-self: center;
 }
+
+.resources__logo:hover {
+    animation: fadeOutIn 5s linear normal infinite running;
+}
