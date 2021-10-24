@@ -38,6 +38,11 @@ charset = utf-8
 
 trim_trailing_whitespace = true
 
+# Disable for Markdown because trailing whitespace is significant
+[*.md]
+trim_trailing_whitespace = false
+
+
 # Denotes whether file should end with a newline
 
 # Possible values - true, false
