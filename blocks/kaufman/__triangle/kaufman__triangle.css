@@ -8,5 +8,4 @@
     width: 636px;
     transform: rotate(-15deg);
     overflow: hidden;
-    animation: rotation 20s linear normal infinite running;
 }

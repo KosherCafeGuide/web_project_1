@@ -3,8 +3,10 @@
     margin: 0;
     color: #2f80ed;
     text-decoration: none;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
 }
 
 .header__link:hover {
-    animation: fadeOutIn 5s linear normal infinite running;
+    opacity: 0.5;
 }

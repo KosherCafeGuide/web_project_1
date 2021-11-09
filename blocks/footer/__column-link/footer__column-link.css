@@ -2,8 +2,9 @@
     color: white;
     text-decoration: none;
     list-style-type: none;
+    transition: opacity 2s ease-in-out;
 }
 
 .footer__column-link:hover {
-    animation: fadeOutIn 5s linear normal infinite running;
+    opacity: 0.5;
 }
